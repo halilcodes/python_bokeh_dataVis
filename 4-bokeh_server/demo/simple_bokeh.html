@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.2.2.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="b9dae6fa-ce73-4ddd-964d-ee14ed047651" data-root-id="p1006" style="display: contents;"></div>
+  
+    <script type="application/json" id="p1007">
+      {"9e8c1cc5-9dfc-4cdf-a311-d2b33fa7c5ea":{"version":"3.2.2","title":"Bokeh Application","roots":[{"type":"object","name":"Column","id":"p1006","attributes":{"children":[{"type":"object","name":"Row","id":"p1004","attributes":{"children":[{"type":"object","name":"Button","id":"p1002","attributes":{"subscribed_events":{"type":"set","entries":["button_click"]},"label":"Generate Text"}},{"type":"object","name":"TextInput","id":"p1001","attributes":{"value":"Halil"}}]}},{"type":"object","name":"Row","id":"p1005","attributes":{"children":[{"type":"object","name":"Paragraph","id":"p1003"}]}}]}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('p1007').textContent;
+              const render_items = [{"docid":"9e8c1cc5-9dfc-4cdf-a311-d2b33fa7c5ea","roots":{"p1006":"b9dae6fa-ce73-4ddd-964d-ee14ed047651"},"root_ids":["p1006"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
