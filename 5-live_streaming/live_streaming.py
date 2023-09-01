@@ -7,7 +7,7 @@ from bokeh.plotting import figure
 # create figure
 f = figure(x_range=(0, 11), y_range=(0, 11))
 
-# create columndatasource
+# create ColumnDataSource
 source = ColumnDataSource(dict(x=[], y=[]))
 
 # create glyphs
